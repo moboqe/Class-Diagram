@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Seller : Client, Imethods //ОБОБЩЕНИЕ(generalization), РЕАЛИЗАЦИЯ(realization)
+    public class Seller : Client, Imethods //ОБОБЩЕНИЕ(generalization), РЕАЛИЗАЦИЯ(realization)
     {
         public List<Flat> sflat = new List<Flat>(); //КОМПОЗИЦИЯ
 

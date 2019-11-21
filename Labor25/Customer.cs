@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Customer : Client, Imethods //ОБОБЩЕНИЕ(generalization), РЕАЛИЗАЦИЯ(realization)
+    public class Customer : Client, Imethods //ОБОБЩЕНИЕ(generalization), РЕАЛИЗАЦИЯ(realization)
     {
+        public double Space { get; set; }
+        public int Floor { get; set; }
+        public int Room { get; set; }
+        public double Market_price { get; set; }
+
         public List<Flat> cflat = new List<Flat>(); //КОМПОЗИЦИЯ
 
         public Customer() { }
@@ -19,9 +24,12 @@ namespace Labor25
             this.Phone = c;
         }
 
-        public void setFlat(Flat newRoom)
+        public void setCriteria(double a, int b, int c, double d)
         {
-            cflat.Add(newRoom);
+            this.Space = a;
+            this.Floor = b;
+            this.Room = c;
+            this.Market_price = d;
         }
         public void getFlat()
         {
@@ -35,6 +43,17 @@ namespace Labor25
         public void getINFO()
         {
             Console.WriteLine("Покупатель — " + Name + ". Паспорт — " + ID + ". Возраст " + Age + " лет. Телефон — " + Phone + "\n");
+        }
+        public Flat Choosing(List<Flat> r)
+        {
+            Random rand = new Random();
+            List<Flat> flats = new List<Flat>();
+            Flat newFlat;
+            for(int i=0;i<r.Count;i++)
+            if (r[i].Floor >= this.Floor && r[i].Room >= this.Room && r[i].Space >= this.Space && r[i].Market_price <= this.Market_price)
+                flats.Add(r[i]);
+            
+           return newFlat = flats[rand.Next(flats.Count)];
         }
     }
 }

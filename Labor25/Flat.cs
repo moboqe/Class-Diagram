@@ -9,12 +9,12 @@ namespace Labor25
     public class Flat
     {
         public string Address { get; set; }
-        public string Space { get; set; }
-        public string Floor { get; set; }
+        public double Space { get; set; }
+        public int Floor { get; set; }
         public int Room { get; set; }
-        public int Market_price { get; set; }
+        public double Market_price { get; set; }
         public Flat() { }
-        public Flat(string a, string b, string c, int d, int e)
+        public Flat(string a, double b, int c, int d, double e)
         {
             Address = a;
             Space = b;

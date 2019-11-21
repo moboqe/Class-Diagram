@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Company
+    public class Company
     {
         public static List<Flat> flat = new List<Flat>(); //КОМПОЗИЦИЯ
+
 
         private static string c_name { get; } = "Гранат";
         public static void PrintName()
@@ -16,7 +17,7 @@ namespace Labor25
             Console.Write("Агенство недвижимости ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             //Console.BackgroundColor = ConsoleColor.White;
-            Console.WriteLine(c_name+"\n");
+            Console.WriteLine(c_name + "\n");
             Console.ResetColor();
         }
 
@@ -28,7 +29,7 @@ namespace Labor25
             int i = 0;
             foreach (var person in flat)
             {
-                Console.Write("\n"+(i + 1)+". ");
+                Console.Write("\n" + (i + 1) + ". ");
                 person.getFlat();
                 i++;
             }
@@ -40,6 +41,7 @@ namespace Labor25
 
             flat.AddRange(obj.sflat);
         }
+
 
     }
 }

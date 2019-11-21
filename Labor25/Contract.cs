@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Contract
+    public class Contract
     {
 
+        public void SignContract(Customer customer, List<Flat> r)
+        {
+           Flat newflat=customer.Choosing(r);
+
+            Console.WriteLine(customer+" заключил договор на квартиру "+ newflat);
+            Console.WriteLine(customer + " отклонил договор");
+        }
     }
 }

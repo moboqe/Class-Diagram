@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Client
+    public class Client
     {
         public string Name { get; set; }
         public string ID { get; set; }
