@@ -42,11 +42,22 @@ namespace Labor25
 
             seller2.getFlat();
 
-          
+            Seller seller3 = new Seller("Павел", "1234 098765", "8(919)1916537", 41);
+            seller2.getINFO();
+
+            Flat fl3 = new Flat("Уральская, 10", 100.5, 12, 4, 2200000);
+
+            seller3.setFlat(fl3);
+
+            seller3.getFlat();
+
+
 
             comp.AddToBase(seller1);
             comp.ShowFlats();
             comp.AddToBase(seller2);
+            comp.ShowFlats();
+            comp.AddToBase(seller3);
             comp.ShowFlats();
 
             contr.SignContract(customer1, Company.flat);

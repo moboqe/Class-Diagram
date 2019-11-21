@@ -52,6 +52,7 @@ namespace Labor25
             for(int i=0;i<r.Count;i++)
             if (r[i].Floor >= this.Floor && r[i].Room >= this.Room && r[i].Space >= this.Space && r[i].Market_price <= this.Market_price)
                 flats.Add(r[i]);
+
            
            return newFlat = flats[rand.Next(flats.Count)];
         }

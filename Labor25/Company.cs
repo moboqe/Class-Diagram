@@ -9,8 +9,7 @@ namespace Labor25
     public class Company
     {
         public static List<Flat> flat = new List<Flat>(); //КОМПОЗИЦИЯ
-
-
+        public static double Margin { get; } = 35000;
         private static string c_name { get; } = "Гранат";
         public static void PrintName()
         {

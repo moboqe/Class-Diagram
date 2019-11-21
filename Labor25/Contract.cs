@@ -14,8 +14,10 @@ namespace Labor25
            Flat newflat=customer.Choosing(r);
             Seller seller = new Seller();
             seller.deleteFlat(newflat);
-            Console.WriteLine(customer+" заключил договор на квартиру "+ newflat);
-            Console.WriteLine(customer + " отклонил договор");
+            r.Remove(newflat);
+            if (newflat!=null)
+            Console.WriteLine(customer.Name+" заключил договор на квартиру по адресу "+ newflat.Address+". На сумму "+(newflat.Market_price+Company.Margin)+" рублей. Маржа агенства составила "+ Company.Margin + " рублей");
+            else  Console.WriteLine(customer.Name + " отклонил договор");
         }
     }
 }
