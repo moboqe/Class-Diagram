@@ -12,7 +12,8 @@ namespace Labor25
         public void SignContract(Customer customer, List<Flat> r)
         {
            Flat newflat=customer.Choosing(r);
-
+            Seller seller = new Seller();
+            seller.deleteFlat(newflat);
             Console.WriteLine(customer+" заключил договор на квартиру "+ newflat);
             Console.WriteLine(customer + " отклонил договор");
         }

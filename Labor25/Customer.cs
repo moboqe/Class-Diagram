@@ -44,7 +44,7 @@ namespace Labor25
         {
             Console.WriteLine("Покупатель — " + Name + ". Паспорт — " + ID + ". Возраст " + Age + " лет. Телефон — " + Phone + "\n");
         }
-        public Flat Choosing(List<Flat> r)
+        public Flat Choosing(List<Flat> r) // ВЫБОРКА ПОДХОДЯЩЕЙ КВАРТИРЫ ИЗ СПИСКА КВАРТИР
         {
             Random rand = new Random();
             List<Flat> flats = new List<Flat>();
@@ -52,7 +52,7 @@ namespace Labor25
             for(int i=0;i<r.Count;i++)
             if (r[i].Floor >= this.Floor && r[i].Room >= this.Room && r[i].Space >= this.Space && r[i].Market_price <= this.Market_price)
                 flats.Add(r[i]);
-            
+           
            return newFlat = flats[rand.Next(flats.Count)];
         }
     }
