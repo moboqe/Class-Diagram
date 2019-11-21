@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Customer : Client //ОБОБЩЕНИЕ(generalization)
+    class Customer : Client, Imethods //ОБОБЩЕНИЕ(generalization), РЕАЛИЗАЦИЯ(realization)
     {
         public List<Flat> cflat = new List<Flat>(); //КОМПОЗИЦИЯ
 
@@ -28,7 +28,7 @@ namespace Labor25
             foreach (var person in cflat)
                 person.getFlat();
         }
-        public void deleteRoom(Flat r)
+        public void deleteFlat(Flat r)
         {
             cflat.Remove(r);
         }

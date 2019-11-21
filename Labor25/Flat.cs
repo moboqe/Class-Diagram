@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labor25
 {
-    class Flat
+    public class Flat
     {
         public string Address { get; set; }
         public string Space { get; set; }
